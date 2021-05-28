@@ -80,6 +80,9 @@
         </a>
       </li>
     </ul>
+
+    
+        <router-link to="/user">to user</router-link>
   </div>
 </template>
 

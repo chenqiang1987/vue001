@@ -4,7 +4,7 @@
     <router-view/>
 
 
-    <router-link to="/user">to hello</router-link>
+  
   </div>
 </template>
 
