@@ -10,10 +10,22 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+
+      '/axios_cnblogs':{
+        target:'https://www.cnblogs.com',
+        changeOrigin:true,
+        ws:true,
+        pathRewrite:{
+          '^/axios_cnblogs': ''
+        }
+        // https://www.cnblogs.com/
+      }
+
+    },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '192.168.1.123', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

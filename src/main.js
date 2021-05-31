@@ -4,6 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router/index.js'
 
+//ajax support
+import  VueResource  from 'vue-resource'
+//cross-domain support
+import axios from 'axios'
+
+
+Vue.use(VueResource)
+Vue.prototype.$axios=axios;
+
+// step3：使每次请求都会带一个 /api 前缀 
+axios.defaults.baseURL = '/axios_cnblogs'
 Vue.config.productionTip = false
 
 

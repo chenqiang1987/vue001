@@ -18,14 +18,12 @@
 </template>
 
 <script>
-
-
-
+// import  Vue from 'vue'
 export default {
   name: "HelloWorld",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App",
+      msg: "shanghai lingang group@.",
       userList: [
         { id: 1, name: "综合管廊" },
         { id: 2, name: "创新晶体" },
@@ -35,9 +33,50 @@ export default {
   },
   methods: {
     show() {
-      console.log("路漫漫其修远兮 一步一个脚印的探索吧");
+      console.log(this + "路漫漫其修远兮 一步一个脚印的探索吧");
+      //   console.log(' ajax function..')
+      this.$axios.get("/ajax/wechatshare/getconfig", {}).then(
+        (res) => {
+          console.log(res);
+        },
+        (res) => {
+          console.log(res);
+        }
+      );
     },
+    // get() {
+
+    //   console.log(' ajax function..')
+    //   this.$http
+    //     .get(
+    //       "https://www.cnblogs.com/ajax/wechatshare/getconfig?url=https%3A%2F%2Fw.cnblogs.com%2Fxuanan%2Fp%2F7847233.html",{}
+    //     )
+    //     .then(
+    //       (res) => {
+    //         console.log(res);
+    //       },
+    //       (res) => {
+    //         console.log(res);
+    //       }
+    //     );
+    // },
   },
+};
+
+window.onload = () => {
+  console.log("template onload...");
+  // Vue.$http
+  //       .get(
+  //         "https://www.cnblogs.com/ajax/wechatshare/getconfig?url=https%3A%2F%2Fw.cnblogs.com%2Fxuanan%2Fp%2F7847233.html",{}
+  //       )
+  //       .then(
+  //         (res) => {
+  //           console.log(res);
+  //         },
+  //         (res) => {
+  //           console.log(res);
+  //         }
+  //       );
 };
 </script>
 
