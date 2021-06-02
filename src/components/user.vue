@@ -44,40 +44,17 @@ export default {
         }
       );
     },
-    // get() {
-
-    //   console.log(' ajax function..')
-    //   this.$http
-    //     .get(
-    //       "https://www.cnblogs.com/ajax/wechatshare/getconfig?url=https%3A%2F%2Fw.cnblogs.com%2Fxuanan%2Fp%2F7847233.html",{}
-    //     )
-    //     .then(
-    //       (res) => {
-    //         console.log(res);
-    //       },
-    //       (res) => {
-    //         console.log(res);
-    //       }
-    //     );
-    // },
   },
+  created(){
+    //alert('created')
+    this.show();
+  },
+  mounted(){
+    //alert('mounted')
+  }
 };
 
-window.onload = () => {
-  console.log("template onload...");
-  // Vue.$http
-  //       .get(
-  //         "https://www.cnblogs.com/ajax/wechatshare/getconfig?url=https%3A%2F%2Fw.cnblogs.com%2Fxuanan%2Fp%2F7847233.html",{}
-  //       )
-  //       .then(
-  //         (res) => {
-  //           console.log(res);
-  //         },
-  //         (res) => {
-  //           console.log(res);
-  //         }
-  //       );
-};
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
